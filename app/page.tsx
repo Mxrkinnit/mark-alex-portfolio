@@ -137,6 +137,15 @@ export default function Home() {
             <a className="button primary" href="#projects">
               View my work <span>↗</span>
             </a>
+            
+            <a
+            className="button secondary"
+            href="/resume.pdf"
+            target="_blank"
+            rel="noreferrer"
+            >
+              Resume <span>↗</span>
+            </a>
 
             <a
               className="button secondary"
