@@ -1,3 +1,4 @@
+import ScrollReveal from "./ScrollReveal";
 const projects = [
   {
     title: "StudySmartAI",
@@ -34,6 +35,24 @@ const projects = [
       "Database-driven web application built with Python and Django implementing Create, Read, Update and Delete operations with SQLite persistence and dynamic Django templates.",
     tech: ["Python", "Django", "SQLite", "HTML", "Backend"],
     link: "https://github.com/Mxrkinnit/crud",
+  },
+];
+
+const experience = [
+  {
+    period: "Founder",
+    company: "FreeWill",
+    role: "Clothing & Streetwear Brand",
+    description:
+      "Founded and developed FreeWill as a clothing and streetwear brand, taking responsibility for brand development, product direction, digital presence and marketing.",
+    areas: [
+      "Brand Development",
+      "Streetwear",
+      "E-commerce",
+      "Digital Marketing",
+      "Creative Direction",
+      "Entrepreneurship",
+    ],
   },
 ];
 
@@ -105,6 +124,7 @@ export default function Home() {
           <a href="#about">About</a>
           <a href="#skills">Skills</a>
           <a href="#projects">Projects</a>
+          <a href="#experience">Experience</a>
           <a href="#education">Education</a>
           <a href="#contact">Contact</a>
         </div>
@@ -122,9 +142,9 @@ export default function Home() {
           </p>
 
           <h1>
-            Building software
+            I build software,
             <br />
-            <span>that solves problems.</span>
+            <span>web and mobile experiences.</span>
           </h1>
 
           <p className="hero-text">
@@ -146,6 +166,15 @@ export default function Home() {
             >
               Resume <span>↗</span>
             </a>
+
+            <a
+  className="button secondary"
+  href="https://www.linkedin.com/in/mark-alex-gachango-b55135270/"
+  target="_blank"
+  rel="noreferrer"
+>
+  LinkedIn <span>↗</span>
+</a>
 
             <a
               className="button secondary"
@@ -205,8 +234,9 @@ export default function Home() {
       </section>
 
       {/* About */}
-      <section id="about" className="section split">
-        <div className="section-label">01 / ABOUT</div>
+      <ScrollReveal>
+        <section id="about" className="section split">
+          <div className="section-label">01 / ABOUT</div>
 
         <div className="content">
           <p className="lead">
@@ -253,10 +283,12 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+        </section>
+        </ScrollReveal>
 
       {/* Skills */}
-      <section id="skills" className="section skills-section">
+      <ScrollReveal>
+  <section id="skills" className="section skills-section">
         <div className="section-label">02 / SKILLS</div>
 
         <div className="content">
@@ -287,10 +319,12 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
+        </section>
+</ScrollReveal>
 
       {/* Projects */}
-      <section id="projects" className="section projects-section">
+      <ScrollReveal>
+  <section id="projects" className="section projects-section">
         <div className="section-label">03 / PROJECTS</div>
 
         <div className="content">
@@ -351,12 +385,95 @@ export default function Home() {
           >
             Explore all GitHub repositories <span>↗</span>
           </a>
+          <div className="github-callout">
+  <div>
+    <p className="project-type">OPEN SOURCE · GITHUB</p>
+    <h3>Explore my code.</h3>
+    <p>
+      View my repositories, experiments and ongoing projects on GitHub.
+    </p>
+  </div>
+
+  <a
+    className="github-button"
+    href="https://github.com/Mxrkinnit"
+    target="_blank"
+    rel="noreferrer"
+  >
+    Visit GitHub <span>↗</span>
+  </a>
+</div>
         </div>
       </section>
+      </ScrollReveal>
+
+      <ScrollReveal>
+        <section id="experience" className="section experience-section">
+          <div className="section-label">04 / EXPERIENCE</div>
+          <div className="content">
+            <div className="section-heading">
+              <h2>Beyond<br /><em>code.</em></h2>
+              <p>
+              Building products and businesses has helped me develop skills beyond
+              programming, including branding, communication, marketing and
+              problem-solving.
+              </p>
+              </div>
+              <div className="experience-card">
+                <div className="experience-meta">
+                  <span>FOUNDER  · </span>
+                  <span>  ENTREPRENEURSHIP</span>
+                  </div>
+                  
+                  <div className="experience-main">
+                    <h3>FreeWill</h3>
+                    <p className="experience-role">
+                      Clothing &amp; Streetwear Brand
+                      </p>
+                      
+                      <p className="experience-description">
+                        FreeWill is an independent clothing and streetwear brand built
+                        around individuality, self-expression, and the freedom to
+                        define your own identity. The brand focuses on creating and
+                        promoting contemporary streetwear while developing a distinct
+                        visual identity and digital presence. As a co-founder, I oversee
+                        the brand's development, creative direction, product concepts,
+                        marketing and online presence, combining creativity,
+                        entrepreneurship and technology to grow the brand.
+                        </p>
+                        
+                        <div className="chips">
+                          {experience[0].areas.map((area) => (
+                            <span key={area}>{area}</span>
+                            ))}
+                            </div>
+                            <div className="experience-links">
+                              <a
+                                href="https://www.instagram.com/fr.eewill?stkn=OXRqMmM2OGlienN4"
+                                target="_blank"
+                                rel="noreferrer"
+                              >
+                                Instagram ↗
+                              </a>
+                              <a
+                              href="freewillco.xyz"
+                              target="_blank"
+                              rel="noreferrer"
+                              >
+                                Website ↗
+                                </a>
+                                </div>
+                            </div>
+                            <div className="experience-arrow">↗</div>
+                            </div>
+                            </div>
+                            </section>
+                            </ScrollReveal>
 
       {/* Education */}
-      <section id="education" className="section split education-section">
-        <div className="section-label">04 / EDUCATION</div>
+      <ScrollReveal>
+        <section id="education" className="section split education-section">
+          <div className="section-label">05 / EDUCATION</div>
 
         <div className="content">
           <div className="timeline">
@@ -393,10 +510,12 @@ export default function Home() {
           </div>
         </div>
       </section>
+      </ScrollReveal>
 
       {/* Certificates */}
-      <section className="section split certificates-section">
-        <div className="section-label">05 / CERTIFICATES</div>
+      <ScrollReveal>
+        <section className="section split certificates-section">
+          <div className="section-label">06 / CERTIFICATES</div>
 
         <div className="content certificate-grid">
           <article className="certificate-card">
@@ -412,10 +531,12 @@ export default function Home() {
           </article>
         </div>
       </section>
+      </ScrollReveal>
 
       {/* Philosophy */}
-      <section className="section philosophy">
-        <div className="quote-mark">“</div>
+      <ScrollReveal>
+        <section className="section philosophy">
+          <div className="quote-mark">“</div>
 
         <blockquote>Build. Learn. Improve. Repeat.</blockquote>
 
@@ -425,11 +546,13 @@ export default function Home() {
           improving with every iteration.
         </p>
       </section>
+      </ScrollReveal>
 
       {/* Contact */}
-      <section id="contact" className="contact">
-        <div className="contact-inner">
-          <p className="eyebrow">06 / CONTACT</p>
+      <ScrollReveal>
+        <section id="contact" className="contact">
+          <div className="contact-inner">
+            <p className="eyebrow">07 / CONTACT</p>
 
           <h2>
             Let&apos;s build something
@@ -458,11 +581,19 @@ export default function Home() {
             >
               GitHub
             </a>
+            <a
+    href="https://www.linkedin.com/in/mark-alex-gachango-b55135270/"
+    target="_blank"
+    rel="noreferrer"
+  >
+    LinkedIn
+  </a>
 
             <a href="tel:+60177268530">+60 17-726 8530</a>
           </div>
         </div>
       </section>
+      </ScrollReveal>
 
       {/* Footer */}
       <footer>
