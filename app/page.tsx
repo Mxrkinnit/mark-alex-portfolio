@@ -185,23 +185,6 @@ export default function Home() {
       Contact
     </a>
 
-    <a
-      href="https://www.linkedin.com/in/mark-alex-gachango-b55135270/"
-      target="_blank"
-      rel="noreferrer"
-      onClick={() => setMenuOpen(false)}
-    >
-      LinkedIn ↗
-    </a>
-
-    <a
-      href="/Mark-Alex-CV.pdf"
-      target="_blank"
-      rel="noreferrer"
-      onClick={() => setMenuOpen(false)}
-    >
-      Resume ↗
-    </a>
   </div>
 )}
 
