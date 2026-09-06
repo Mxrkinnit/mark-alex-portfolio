@@ -4,6 +4,7 @@ import ScrollReveal from "./ScrollReveal";
 const projects = [
   {
     title: "StudySmartAI",
+    period: "05/2026 — 08/2026",
     type: "AI-Powered Study Application",
     description:
       "A study-focused application designed to help students organize and improve their learning experience. The project applies object-oriented programming and structured software design to create a practical educational application.",
@@ -15,6 +16,7 @@ const projects = [
 
   {
     title: "Hospital Management System",
+    period: "04/2026 — 08/2026",
     type: "Healthcare Management Application",
     description:
       "A C++ management system designed to organize healthcare information and streamline common administrative operations within a hospital environment.",
@@ -26,6 +28,7 @@ const projects = [
 
   {
     title: "Looket App",
+    period: "04/2023 — 07/2023",
     type: "Android Mobile Application",
     description:
       "A Kotlin-based Android application developed to explore mobile application development, user interaction and modern Android project architecture.",
@@ -37,6 +40,7 @@ const projects = [
 
   {
     title: "CRUD Web Application",
+    period: "02/2023 — 02/2023",
     type: "Database-Driven Web Application",
     description:
       "A Django web application implementing complete Create, Read, Update and Delete functionality with persistent database storage.",
