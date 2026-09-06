@@ -1,39 +1,48 @@
+"use client";
+import { useState } from "react";
 import ScrollReveal from "./ScrollReveal";
 const projects = [
   {
     title: "StudySmartAI",
     type: "AI-Powered Study Application",
-    period: "05/2026 — 08/2026",
     description:
-      "AI-focused study application designed to support students with learning and study management. Built with C++ in an Xcode-based development environment using object-oriented programming and software design principles.",
-    tech: ["C++", "OOP", "Xcode", "AI / EdTech"],
+      "A study-focused application designed to help students organize and improve their learning experience. The project applies object-oriented programming and structured software design to create a practical educational application.",
+    details:
+      "Developed the application in C++ with an emphasis on object-oriented design, modular program structure and maintainable code. The project demonstrates the ability to translate an educational problem into a functional software solution while applying core programming and software engineering principles.",
+    tech: ["C++", "OOP", "Xcode", "Software Design"],
     link: "https://github.com/Mxrkinnit/StudySmartAI",
   },
+
   {
     title: "Hospital Management System",
     type: "Healthcare Management Application",
-    period: "04/2026 — 08/2026",
     description:
-      "C++-based hospital management application for organizing and managing healthcare-related records. Designed using object-oriented programming, modular components and data-management principles.",
-    tech: ["C++", "OOP", "Data Structures", "System Design", "Xcode"],
+      "A C++ management system designed to organize healthcare information and streamline common administrative operations within a hospital environment.",
+    details:
+      "Implemented using object-oriented programming and structured data management techniques. The project focuses on organizing patient and appointment-related information while demonstrating practical use of classes, data structures, program logic and modular application design.",
+    tech: ["C++", "OOP", "Data Structures", "System Design"],
     link: "https://github.com/Mxrkinnit/Hospital-Management-System",
   },
+
   {
     title: "Looket App",
-    type: "Android Application",
-    period: "04/2023 — 07/2023",
+    type: "Android Mobile Application",
     description:
-      "Android application developed using Kotlin and the Android development ecosystem. Structured using Android project architecture and Gradle-based dependency and build management.",
-    tech: ["Kotlin", "Android", "Gradle", "Mobile Development"],
+      "A Kotlin-based Android application developed to explore mobile application development, user interaction and modern Android project architecture.",
+    details:
+      "Built using Kotlin with a Gradle-based project structure. The project provided hands-on experience with Android development, application interfaces and organizing mobile functionality into a maintainable application structure.",
+    tech: ["Kotlin", "Android", "Gradle", "UI Development"],
     link: "https://github.com/Mxrkinnit/Looket_App",
   },
+
   {
     title: "CRUD Web Application",
     type: "Database-Driven Web Application",
-    period: "02/2023 — 02/2023",
     description:
-      "Database-driven web application built with Python and Django implementing Create, Read, Update and Delete operations with SQLite persistence and dynamic Django templates.",
-    tech: ["Python", "Django", "SQLite", "HTML", "Backend"],
+      "A Django web application implementing complete Create, Read, Update and Delete functionality with persistent database storage.",
+    details:
+      "Developed the application using Python and Django, with SQLite used for data persistence and HTML templates for the user interface. The project demonstrates backend development, database interaction, routing, form handling and the implementation of a complete CRUD workflow.",
+    tech: ["Python", "Django", "SQLite", "HTML"],
     link: "https://github.com/Mxrkinnit/crud",
   },
 ];
@@ -111,7 +120,10 @@ const education = [
   },
 ];
 
+
+
 export default function Home() {
+  const [menuOpen, setMenuOpen] = useState(false);
   return (
     <main>
       {/* Navigation */}
@@ -129,10 +141,65 @@ export default function Home() {
           <a href="#contact">Contact</a>
         </div>
 
+       <button
+  className="mobile-menu-button"
+  onClick={() => setMenuOpen(!menuOpen)}
+  aria-label="Toggle navigation menu"
+  aria-expanded={menuOpen}
+>
+  {menuOpen ? "✕" : "☰"}
+</button>
+
         <a className="nav-cta" href="mailto:markgachango@gmail.com">
           Let&apos;s talk
         </a>
       </nav>
+
+      {menuOpen && (
+  <div className="mobile-menu">
+    <a href="#about" onClick={() => setMenuOpen(false)}>
+      About
+    </a>
+
+    <a href="#skills" onClick={() => setMenuOpen(false)}>
+      Skills
+    </a>
+
+    <a href="#projects" onClick={() => setMenuOpen(false)}>
+      Projects
+    </a>
+
+    <a href="#experience" onClick={() => setMenuOpen(false)}>
+      Experience
+    </a>
+
+    <a href="#education" onClick={() => setMenuOpen(false)}>
+      Education
+    </a>
+
+    <a href="#contact" onClick={() => setMenuOpen(false)}>
+      Contact
+    </a>
+
+    <a
+      href="https://www.linkedin.com/in/mark-alex-gachango-b55135270/"
+      target="_blank"
+      rel="noreferrer"
+      onClick={() => setMenuOpen(false)}
+    >
+      LinkedIn ↗
+    </a>
+
+    <a
+      href="/Mark-Alex-CV.pdf"
+      target="_blank"
+      rel="noreferrer"
+      onClick={() => setMenuOpen(false)}
+    >
+      Resume ↗
+    </a>
+  </div>
+)}
 
       {/* Hero */}
       <section id="home" className="hero section">
@@ -357,11 +424,15 @@ export default function Home() {
 
                   <p>{project.description}</p>
 
-                  <div className="chips">
-                    {project.tech.map((technology) => (
-                      <span key={technology}>{technology}</span>
-                    ))}
-                  </div>
+<p className="project-details">
+  {project.details}
+</p>
+
+<div className="chips">
+  {project.tech.map((tech) => (
+    <span key={tech}>{tech}</span>
+  ))}
+</div>
                 </div>
 
                 <a
