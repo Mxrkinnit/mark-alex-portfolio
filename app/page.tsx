@@ -1,7 +1,62 @@
+
 "use client";
+
 import { useState } from "react";
 import ScrollReveal from "./ScrollReveal";
+
 const projects = [
+  {
+    title: "MadeForEachOther",
+    period: "10/2026 — Present",
+    type: "Full-Stack Development · Product Design",
+    description:
+      "A personalized digital gifting platform that transforms personal memories, photographs, and heartfelt messages into unique websites for anniversaries, birthdays, apologies, and other meaningful occasions.",
+    details:
+      "Developed a customer order workflow with customizable gift preferences and photo uploads, alongside an administrative dashboard for building, previewing, saving, and publishing personalized gift pages. Integrated Supabase for database management, authentication, and private photo storage, with dynamic routes generating unique URLs for published gifts.",
+    tech: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Supabase",
+      "Tailwind CSS",
+    ],
+    link: "https://github.com/Mxrkinnit/made-for-each-other",
+  },
+  {
+    title: "MenuSasa",
+    period: "09/2026 — Present",
+    type: "Full-Stack Development · Restaurant Technology",
+    description:
+      "A QR-powered restaurant ordering platform that enables customers to browse digital menus, order directly from their tables, and manage their selections through an interactive, mobile-friendly interface.",
+    details:
+      "Implemented table-specific QR codes, menu browsing, shopping-cart functionality, and order submission. Integrated Supabase for restaurant, table, menu, and order data, with administrative tools for managing incoming orders. Designed the platform around reusable restaurant structures to support future expansion into a multi-restaurant ordering service.",
+    tech: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Supabase",
+      "QR Codes",
+    ],
+    link: "https://github.com/Mxrkinnit/MenuSasa",
+  },
+  {
+    title: "CareerAtlas AI",
+    period: "10/2026",
+    type: "Data Engineering · Career Intelligence · Hackathon",
+    description:
+      "A workforce intelligence platform that helps users explore career opportunities through explainable skill matching, skills-gap analysis, employment data, and indicators of AI-driven changes in the workplace.",
+    details:
+      "Developed a career-matching engine that ranks occupations using a transparent scoring formula and identifies missing skills with structured reskilling recommendations. Integrated occupational and workforce datasets, country-specific employment information, and skill-trend indicators into an interactive platform. The project combines data processing, API development, automated validation, and visual analytics to support evidence-informed career exploration.",
+    tech: [
+      "React",
+      "TypeScript",
+      "Vite",
+      "Node.js",
+      "Express",
+      "Recharts",
+    ],
+    link: "https://github.com/Mxrkinnit/SDC_Hackathon",
+  },
   {
     title: "StudySmartAI",
     period: "05/2026 — 08/2026",
@@ -13,7 +68,6 @@ const projects = [
     tech: ["C++", "OOP", "Xcode", "Software Design"],
     link: "https://github.com/Mxrkinnit/StudySmartAI",
   },
-
   {
     title: "Hospital Management System",
     period: "04/2026 — 08/2026",
@@ -25,7 +79,6 @@ const projects = [
     tech: ["C++", "OOP", "Data Structures", "System Design"],
     link: "https://github.com/Mxrkinnit/Hospital-Management-System",
   },
-
   {
     title: "Looket App",
     period: "04/2023 — 07/2023",
@@ -37,7 +90,6 @@ const projects = [
     tech: ["Kotlin", "Android", "Gradle", "UI Development"],
     link: "https://github.com/Mxrkinnit/Looket_App",
   },
-
   {
     title: "CRUD Web Application",
     period: "02/2023 — 02/2023",
@@ -124,10 +176,9 @@ const education = [
   },
 ];
 
-
-
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <main>
       {/* Navigation */}
@@ -145,14 +196,14 @@ export default function Home() {
           <a href="#contact">Contact</a>
         </div>
 
-       <button
-  className="mobile-menu-button"
-  onClick={() => setMenuOpen(!menuOpen)}
-  aria-label="Toggle navigation menu"
-  aria-expanded={menuOpen}
->
-  {menuOpen ? "✕" : "☰"}
-</button>
+        <button
+          className="mobile-menu-button"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle navigation menu"
+          aria-expanded={menuOpen}
+        >
+          {menuOpen ? "✕" : "☰"}
+        </button>
 
         <a className="nav-cta" href="mailto:markgachango@gmail.com">
           Let&apos;s talk
@@ -160,33 +211,27 @@ export default function Home() {
       </nav>
 
       {menuOpen && (
-  <div className="mobile-menu">
-    <a href="#about" onClick={() => setMenuOpen(false)}>
-      About
-    </a>
-
-    <a href="#skills" onClick={() => setMenuOpen(false)}>
-      Skills
-    </a>
-
-    <a href="#projects" onClick={() => setMenuOpen(false)}>
-      Projects
-    </a>
-
-    <a href="#experience" onClick={() => setMenuOpen(false)}>
-      Experience
-    </a>
-
-    <a href="#education" onClick={() => setMenuOpen(false)}>
-      Education
-    </a>
-
-    <a href="#contact" onClick={() => setMenuOpen(false)}>
-      Contact
-    </a>
-
-  </div>
-)}
+        <div className="mobile-menu">
+          <a href="#about" onClick={() => setMenuOpen(false)}>
+            About
+          </a>
+          <a href="#skills" onClick={() => setMenuOpen(false)}>
+            Skills
+          </a>
+          <a href="#projects" onClick={() => setMenuOpen(false)}>
+            Projects
+          </a>
+          <a href="#experience" onClick={() => setMenuOpen(false)}>
+            Experience
+          </a>
+          <a href="#education" onClick={() => setMenuOpen(false)}>
+            Education
+          </a>
+          <a href="#contact" onClick={() => setMenuOpen(false)}>
+            Contact
+          </a>
+        </div>
+      )}
 
       {/* Hero */}
       <section id="home" className="hero section">
@@ -211,24 +256,24 @@ export default function Home() {
             <a className="button primary" href="#projects">
               View my work <span>↗</span>
             </a>
-            
+
             <a
-            className="button secondary"
-            href="/resume.pdf"
-            target="_blank"
-            rel="noreferrer"
+              className="button secondary"
+              href="/resume.pdf"
+              target="_blank"
+              rel="noreferrer"
             >
               Resume <span>↗</span>
             </a>
 
             <a
-  className="button secondary"
-  href="https://www.linkedin.com/in/mark-alex-gachango-b55135270/"
-  target="_blank"
-  rel="noreferrer"
->
-  LinkedIn <span>↗</span>
-</a>
+              className="button secondary"
+              href="https://www.linkedin.com/in/mark-alex-gachango-b55135270/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              LinkedIn <span>↗</span>
+            </a>
 
             <a
               className="button secondary"
@@ -247,7 +292,7 @@ export default function Home() {
             </div>
 
             <div>
-              <strong>4</strong>
+              <strong>{projects.length}</strong>
               <span>Featured projects</span>
             </div>
 
@@ -292,282 +337,307 @@ export default function Home() {
         <section id="about" className="section split">
           <div className="section-label">01 / ABOUT</div>
 
-        <div className="content">
-          <p className="lead">
-            Computer Science student with hands-on experience in
-            <strong>
-              {" "}
-              software, application, web and mobile development.
-            </strong>
-          </p>
+          <div className="content">
+            <p className="lead">
+              Computer Science student with hands-on experience in
+              <strong>
+                {" "}
+                software, application, web and mobile development.
+              </strong>
+            </p>
 
-          <p>
-            Experienced across C++, Python, Kotlin and modern web technologies,
-            with practical exposure to Django, Flutter, Flask, React, SQL,
-            Firebase and Git. My projects span AI-assisted learning, healthcare
-            management, Android applications and database-driven web
-            development.
-          </p>
+            <p>
+              Experienced across C++, Python, Kotlin and modern web
+              technologies, with practical exposure to Django, Flutter,
+              Flask, React, SQL, Firebase and Git. My projects span
+              personalized digital products, restaurant ordering systems,
+              career intelligence, healthcare management, Android
+              applications and database-driven web development.
+            </p>
 
-          <p>
-            I enjoy translating real-world requirements into functional
-            software and continuously improving my knowledge of software
-            engineering, architecture, databases and problem-solving.
-          </p>
+            <p>
+              I enjoy translating real-world requirements into functional
+              software and continuously improving my knowledge of software
+              engineering, architecture, databases and problem-solving.
+            </p>
 
-          <div className="about-grid">
-            <div>
-              <span>Currently</span>
-              <strong>Computer Science &amp; Technology</strong>
-            </div>
+            <div className="about-grid">
+              <div>
+                <span>Currently</span>
+                <strong>Computer Science &amp; Technology</strong>
+              </div>
 
-            <div>
-              <span>University</span>
-              <strong>Xiamen University Malaysia</strong>
-            </div>
+              <div>
+                <span>University</span>
+                <strong>Xiamen University Malaysia</strong>
+              </div>
 
-            <div>
-              <span>Based in</span>
-              <strong>Sepang, Malaysia</strong>
-            </div>
+              <div>
+                <span>Based in</span>
+                <strong>Sepang, Malaysia</strong>
+              </div>
 
-            <div>
-              <span>Interested in</span>
-              <strong>Software &amp; Technology Opportunities</strong>
+              <div>
+                <span>Interested in</span>
+                <strong>Software &amp; Technology Opportunities</strong>
+              </div>
             </div>
           </div>
-        </div>
         </section>
-        </ScrollReveal>
+      </ScrollReveal>
 
       {/* Skills */}
       <ScrollReveal>
-  <section id="skills" className="section skills-section">
-        <div className="section-label">02 / SKILLS</div>
+        <section id="skills" className="section skills-section">
+          <div className="section-label">02 / SKILLS</div>
 
-        <div className="content">
-          <div className="section-heading">
-            <h2>
-              Tools I use to
-              <br />
-              <em>build.</em>
-            </h2>
+          <div className="content">
+            <div className="section-heading">
+              <h2>
+                Tools I use to
+                <br />
+                <em>build.</em>
+              </h2>
 
-            <p>
-              Technologies I&apos;ve worked with through coursework,
-              independent projects and software development training.
-            </p>
-          </div>
+              <p>
+                Technologies I&apos;ve worked with through coursework,
+                independent projects and software development training.
+              </p>
+            </div>
 
-          <div className="skill-grid">
-            {skillGroups.map((group) => (
-              <div className="skill-group" key={group.title}>
-                <h3>{group.title}</h3>
+            <div className="skill-grid">
+              {skillGroups.map((group) => (
+                <div className="skill-group" key={group.title}>
+                  <h3>{group.title}</h3>
 
-                <div className="chips">
-                  {group.skills.map((skill) => (
-                    <span key={skill}>{skill}</span>
-                  ))}
+                  <div className="chips">
+                    {group.skills.map((skill) => (
+                      <span key={skill}>{skill}</span>
+                    ))}
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
         </section>
-</ScrollReveal>
+      </ScrollReveal>
 
       {/* Projects */}
       <ScrollReveal>
-  <section id="projects" className="section projects-section">
-        <div className="section-label">03 / PROJECTS</div>
+        <section id="projects" className="section projects-section">
+          <div className="section-label">03 / PROJECTS</div>
 
-        <div className="content">
-          <div className="section-heading">
-            <h2>
-              Selected
-              <br />
-              <em>work.</em>
-            </h2>
-
-            <p>
-              Projects demonstrating practical experience across systems,
-              mobile, backend and web development.
-            </p>
-          </div>
-
-          <div className="project-list">
-            {projects.map((project, index) => (
-              <article className="project-card" key={project.title}>
-                <div className="project-number">
-                  {String(index + 1).padStart(2, "0")}
-                </div>
-
-                <div className="project-main">
-                  <p className="project-type">
-                    {project.type} · {project.period}
-                  </p>
-
-                  <h3>{project.title}</h3>
-
-                  <p>{project.description}</p>
-
-<p className="project-details">
-  {project.details}
-</p>
-
-<div className="chips">
-  {project.tech.map((tech) => (
-    <span key={tech}>{tech}</span>
-  ))}
-</div>
-                </div>
-
-                <a
-                  className="project-link"
-                  href={project.link}
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label={`View ${project.title} on GitHub`}
-                >
-                  ↗
-                </a>
-              </article>
-            ))}
-          </div>
-
-          <a
-            className="all-projects"
-            href="https://github.com/Mxrkinnit?tab=repositories"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Explore all GitHub repositories <span>↗</span>
-          </a>
-          <div className="github-callout">
-  <div>
-    <p className="project-type">OPEN SOURCE · GITHUB</p>
-    <h3>Explore my code.</h3>
-    <p>
-      View my repositories, experiments and ongoing projects on GitHub.
-    </p>
-  </div>
-
-  <a
-    className="github-button"
-    href="https://github.com/Mxrkinnit"
-    target="_blank"
-    rel="noreferrer"
-  >
-    Visit GitHub <span>↗</span>
-  </a>
-</div>
-        </div>
-      </section>
-      </ScrollReveal>
-
-      <ScrollReveal>
-        <section id="experience" className="section experience-section">
-          <div className="section-label">04 / EXPERIENCE</div>
           <div className="content">
             <div className="section-heading">
-              <h2>Beyond<br /><em>code.</em></h2>
+              <h2>
+                Selected
+                <br />
+                <em>work.</em>
+              </h2>
+
               <p>
-              Building products and businesses has helped me develop skills beyond
-              programming, including branding, communication, marketing and
-              problem-solving.
+                A selection of products and applications I&apos;ve built,
+                spanning full-stack development, restaurant technology,
+                career intelligence, mobile applications, and
+                database-driven systems.
               </p>
-              </div>
-              <div className="experience-card">
-                <div className="experience-meta">
-                  <span>FOUNDER  · </span>
-                  <span>  ENTREPRENEURSHIP</span>
+            </div>
+
+            <div className="project-list">
+              {projects.map((project, index) => (
+                <article className="project-card" key={project.title}>
+                  <div className="project-number">
+                    {String(index + 1).padStart(2, "0")}
                   </div>
-                  
-                  <div className="experience-main">
-                    <h3>FreeWill</h3>
-                    <p className="experience-role">
-                      Clothing &amp; Streetwear Brand
-                      </p>
-                      
-                      <p className="experience-description">
-                        FreeWill is an independent clothing and streetwear brand built
-                        around individuality, self-expression, and the freedom to
-                        define your own identity. The brand focuses on creating and
-                        promoting contemporary streetwear while developing a distinct
-                        visual identity and digital presence. As a co-founder, I oversee
-                        the brand's development, creative direction, product concepts,
-                        marketing and online presence, combining creativity,
-                        entrepreneurship and technology to grow the brand.
-                        </p>
-                        
-                        <div className="chips">
-                          {experience[0].areas.map((area) => (
-                            <span key={area}>{area}</span>
-                            ))}
-                            </div>
-                            <div className="experience-links">
-                              <a
-                                href="https://www.instagram.com/fr.eewill?stkn=OXRqMmM2OGlienN4"
-                                target="_blank"
-                                rel="noreferrer"
-                              >
-                                Instagram ↗
-                              </a>
-                              <a
-                              href="freewillco.xyz"
-                              target="_blank"
-                              rel="noreferrer"
-                              >
-                                Website ↗
-                                </a>
-                                </div>
-                            </div>
-                            <div className="experience-arrow">↗</div>
-                            </div>
-                            </div>
-                            </section>
-                            </ScrollReveal>
+
+                  <div className="project-main">
+                    <p className="project-type">
+                      {project.type} · {project.period}
+                    </p>
+
+                    <h3>{project.title}</h3>
+
+                    <p>{project.description}</p>
+
+                    <p className="project-details">
+                      {project.details}
+                    </p>
+
+                    <div className="chips">
+                      {project.tech.map((tech) => (
+                        <span key={tech}>{tech}</span>
+                      ))}
+                    </div>
+                  </div>
+
+                  <a
+                    className="project-link"
+                    href={project.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={`View ${project.title} on GitHub`}
+                  >
+                    ↗
+                  </a>
+                </article>
+              ))}
+            </div>
+
+            <a
+              className="all-projects"
+              href="https://github.com/Mxrkinnit?tab=repositories"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Explore all GitHub repositories <span>↗</span>
+            </a>
+
+            <div className="github-callout">
+              <div>
+                <p className="project-type">OPEN SOURCE · GITHUB</p>
+                <h3>Explore my code.</h3>
+                <p>
+                  View my repositories, experiments and ongoing projects
+                  on GitHub.
+                </p>
+              </div>
+
+              <a
+                className="github-button"
+                href="https://github.com/Mxrkinnit"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Visit GitHub <span>↗</span>
+              </a>
+            </div>
+          </div>
+        </section>
+      </ScrollReveal>
+
+      {/* Experience */}
+      <ScrollReveal>
+        <section
+          id="experience"
+          className="section experience-section"
+        >
+          <div className="section-label">04 / EXPERIENCE</div>
+
+          <div className="content">
+            <div className="section-heading">
+              <h2>
+                Beyond
+                <br />
+                <em>code.</em>
+              </h2>
+
+              <p>
+                Building products and businesses has helped me develop
+                skills beyond programming, including branding,
+                communication, marketing and problem-solving.
+              </p>
+            </div>
+
+            <div className="experience-card">
+              <div className="experience-meta">
+                <span>FOUNDER · </span>
+                <span>ENTREPRENEURSHIP</span>
+              </div>
+
+              <div className="experience-main">
+                <h3>{experience[0].company}</h3>
+
+                <p className="experience-role">
+                  {experience[0].role}
+                </p>
+
+                <p className="experience-description">
+                  FreeWill is an independent clothing and streetwear
+                  brand built around individuality, self-expression,
+                  and the freedom to define your own identity. The brand
+                  focuses on creating and promoting contemporary
+                  streetwear while developing a distinct visual identity
+                  and digital presence. As a co-founder, I oversee the
+                  brand&apos;s development, creative direction, product
+                  concepts, marketing and online presence, combining
+                  creativity, entrepreneurship and technology to grow
+                  the brand.
+                </p>
+
+                <div className="chips">
+                  {experience[0].areas.map((area) => (
+                    <span key={area}>{area}</span>
+                  ))}
+                </div>
+
+                <div className="experience-links">
+                  <a
+                    href="https://www.instagram.com/fr.eewill/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Instagram ↗
+                  </a>
+
+                  <a
+                    href="https://freewillco.xyz"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Website ↗
+                  </a>
+                </div>
+              </div>
+
+              <div className="experience-arrow">↗</div>
+            </div>
+          </div>
+        </section>
+      </ScrollReveal>
 
       {/* Education */}
       <ScrollReveal>
-        <section id="education" className="section split education-section">
+        <section
+          id="education"
+          className="section split education-section"
+        >
           <div className="section-label">05 / EDUCATION</div>
 
-        <div className="content">
-          <div className="timeline">
-            {education.map((item) => (
-              <div className="timeline-item" key={item.school}>
-                <span>{item.period}</span>
+          <div className="content">
+            <div className="timeline">
+              {education.map((item) => (
+                <div className="timeline-item" key={item.school}>
+                  <span>{item.period}</span>
 
-                <div>
-                  <h3>{item.school}</h3>
-                  <p>{item.qualification}</p>
-                  <small>{item.location}</small>
+                  <div>
+                    <h3>{item.school}</h3>
+                    <p>{item.qualification}</p>
+                    <small>{item.location}</small>
+                  </div>
                 </div>
+              ))}
+            </div>
+
+            <div className="languages">
+              <h3>Languages</h3>
+
+              <div className="language-row">
+                <span>English</span>
+                <b>Fluent</b>
               </div>
-            ))}
-          </div>
 
-          <div className="languages">
-            <h3>Languages</h3>
+              <div className="language-row">
+                <span>Kiswahili</span>
+                <b>Fluent</b>
+              </div>
 
-            <div className="language-row">
-              <span>English</span>
-              <b>Fluent</b>
-            </div>
-
-            <div className="language-row">
-              <span>Kiswahili</span>
-              <b>Fluent</b>
-            </div>
-
-            <div className="language-row">
-              <span>German</span>
-              <b>Learning</b>
+              <div className="language-row">
+                <span>German</span>
+                <b>Learning</b>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
       </ScrollReveal>
 
       {/* Certificates */}
@@ -575,20 +645,20 @@ export default function Home() {
         <section className="section split certificates-section">
           <div className="section-label">06 / CERTIFICATES</div>
 
-        <div className="content certificate-grid">
-          <article className="certificate-card">
-            <span>2023</span>
-            <h3>Full Stack Software Development</h3>
-            <p>Emobilis Technology Training Institute</p>
-          </article>
+          <div className="content certificate-grid">
+            <article className="certificate-card">
+              <span>2023</span>
+              <h3>Full Stack Software Development</h3>
+              <p>Emobilis Technology Training Institute</p>
+            </article>
 
-          <article className="certificate-card">
-            <span>2023</span>
-            <h3>Computer Packages</h3>
-            <p>Cascade Institute of Hospitality</p>
-          </article>
-        </div>
-      </section>
+            <article className="certificate-card">
+              <span>2023</span>
+              <h3>Computer Packages</h3>
+              <p>Cascade Institute of Hospitality</p>
+            </article>
+          </div>
+        </section>
       </ScrollReveal>
 
       {/* Philosophy */}
@@ -596,14 +666,14 @@ export default function Home() {
         <section className="section philosophy">
           <div className="quote-mark">“</div>
 
-        <blockquote>Build. Learn. Improve. Repeat.</blockquote>
+          <blockquote>Build. Learn. Improve. Repeat.</blockquote>
 
-        <p>
-          I believe the best way to grow as a developer is by continuously
-          building projects, solving problems, learning from mistakes and
-          improving with every iteration.
-        </p>
-      </section>
+          <p>
+            I believe the best way to grow as a developer is by
+            continuously building projects, solving problems, learning
+            from mistakes and improving with every iteration.
+          </p>
+        </section>
       </ScrollReveal>
 
       {/* Contact */}
@@ -612,45 +682,49 @@ export default function Home() {
           <div className="contact-inner">
             <p className="eyebrow">07 / CONTACT</p>
 
-          <h2>
-            Let&apos;s build something
-            <br />
-            <em>meaningful.</em>
-          </h2>
+            <h2>
+              Let&apos;s build something
+              <br />
+              <em>meaningful.</em>
+            </h2>
 
-          <p>
-            I&apos;m interested in software development opportunities,
-            internships, collaborations and projects where I can continue
-            learning while contributing practical technical skills.
-          </p>
+            <p>
+              I&apos;m interested in software development opportunities,
+              internships, collaborations and projects where I can
+              continue learning while contributing practical technical
+              skills.
+            </p>
 
-          <a
-            className="contact-email"
-            href="mailto:markgachango@gmail.com"
-          >
-            markgachango@gmail.com <span>↗</span>
-          </a>
-
-          <div className="socials">
             <a
-              href="https://github.com/Mxrkinnit"
-              target="_blank"
-              rel="noreferrer"
+              className="contact-email"
+              href="mailto:markgachango@gmail.com"
             >
-              GitHub
+              markgachango@gmail.com <span>↗</span>
             </a>
-            <a
-    href="https://www.linkedin.com/in/mark-alex-gachango-b55135270/"
-    target="_blank"
-    rel="noreferrer"
-  >
-    LinkedIn
-  </a>
 
-            <a href="tel:+60177268530">+60 17-726 8530</a>
+            <div className="socials">
+              <a
+                href="https://github.com/Mxrkinnit"
+                target="_blank"
+                rel="noreferrer"
+              >
+                GitHub
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/mark-alex-gachango-b55135270/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                LinkedIn
+              </a>
+
+              <a href="tel:+60177268530">
+                +60 17-726 8530
+              </a>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
       </ScrollReveal>
 
       {/* Footer */}
